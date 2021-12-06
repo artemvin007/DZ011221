@@ -1,0 +1,15 @@
+class Sort:
+  def __init__(self):
+    pass
+
+  def bubble(self, a, way = True):
+    for i in range(len(a)):
+      for j in range((len(a) - i - 1)):
+        if (a[j] > a[j + 1]) and way:
+          a[j], a[j + 1] = a[j + 1], a[j]
+    return a
+
+sorter = Sort()
+a = [1, 6, 3, 6, 34, 7]
+
+print(sorter.bubble(a, False))
